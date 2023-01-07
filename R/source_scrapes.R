@@ -984,7 +984,7 @@ scrape_fantasypros = function(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
     week = get_scrape_week()
   }
 
-
+  
 
   if(week > 0) {
     scrape_week = paste0(".php?week=", week)
