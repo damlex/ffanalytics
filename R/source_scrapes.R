@@ -962,6 +962,8 @@ scrape_fantasypros = function(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
     scrape_week = ".php?week=draft"
   }
 
+  message(scrape_week)
+  
   base_link = paste0("https://www.fantasypros.com/nfl/projections")
   site_session = rvest::session(base_link)
 
