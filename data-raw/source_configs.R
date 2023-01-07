@@ -170,7 +170,7 @@ html_sites <- list(
   FantasyPros = list(
     base = "https://www.fantasypros.com/nfl/projections/",
     get_path = function(season, week, position) {
-      if(week %in% 1:17) {
+      if(week %in% 1:18) {
         paste0(tolower(position), ".php?week=", week)
       } else {
         paste0(tolower(position), ".php")
