@@ -946,6 +946,11 @@ scrape_fftoday <- function(pos = c("QB", "RB", "WR", "TE", "K", "DST", "DL", "LB
 scrape_fantasypros = function(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
                               season = NULL, week = NULL, draft = TRUE, weekly = TRUE) {
   message("\nThe FantasyPros scrape uses a 2 second delay between pages")
+  message("\n Season")
+  message(season)
+
+  message("\n Week")
+  message(week)
 
   if(is.null(season)) {
     season = get_scrape_year()
@@ -953,8 +958,6 @@ scrape_fantasypros = function(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
   if(is.null(week)) {
     week = get_scrape_week()
   }
-    message("*******week***********")
-    message(scrape_week)
 
   if(week > 0) {
     scrape_week = paste0(".php?week=", week)
@@ -962,9 +965,8 @@ scrape_fantasypros = function(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
     scrape_week = ".php?week=draft"
   }
 
-  message("*******scrape_week***********")  
-  message(scrape_week)
-  
+
+
   base_link = paste0("https://www.fantasypros.com/nfl/projections")
   site_session = rvest::session(base_link)
 
