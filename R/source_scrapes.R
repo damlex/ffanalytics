@@ -242,7 +242,7 @@ scrape_fantasysharks <- function(pos = c("QB", "RB", "WR", "TE", "K", "DST", "DL
   # segment for url from user week input
   if (week == 0) {
     segment <- year
-  } else if (week %in% c(1:22)) {
+  } else if (week %in% c(1:26)) {
     segment <- year + week + 8
   } else if (week %in% "ros") {
     segment <- 813
