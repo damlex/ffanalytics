@@ -170,7 +170,7 @@ html_sites <- list(
   FantasyPros = list(
     base = "https://www.fantasypros.com/nfl/projections/",
     get_path = function(season, week, position) {
-      if(week %in% 1:18) {
+      if(week %in% 1:26) {
         paste0(tolower(position), ".php?week=", week)
       } else {
         paste0(tolower(position), ".php")
@@ -178,11 +178,13 @@ html_sites <- list(
 
     },
     get_query = function(season, week, pos_id, ...){
+      message("\n get_query")
+      message(week)
       if(week == 0)
         return(list(week = "draft"))
     },
     min_week = 0,
-    max_week = 21,
+    max_week = 26,
     season_pos = c("QB", "RB", "WR", "TE", "K", "DST"),
     week_pos = c("QB", "RB", "WR", "TE", "K", "DST"),
     id_col = "fantasypro_id",
